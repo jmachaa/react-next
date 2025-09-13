@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import Login from './components/Login';
+import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import Employees from './components/Employees';
 import Attendance from './components/Attendance';
@@ -24,6 +26,8 @@ function App() {
         </nav>
         <main className="hrms-main">
           <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/" element={<Dashboard />} />
             <Route path="/employees" element={<Employees />} />
             <Route path="/attendance" element={<Attendance />} />
